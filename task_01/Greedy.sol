@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity 0.8.28;
 
+// 用贪心算法
 contract Greedy {
-    function num2Roman(uint input) public pure returns (string memory) {
+    function num2Roman(uint input) external pure returns (string memory) {
         bytes memory res;
         uint16[13] memory values = [
             1000,
