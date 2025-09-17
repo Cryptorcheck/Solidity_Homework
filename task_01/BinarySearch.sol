@@ -5,7 +5,7 @@ contract BinarySearch {
     function binarySearch(
         uint8[] memory arr,
         uint target
-    ) external pure returns (uint) {
+    ) external pure returns (int) {
         uint left;
         uint right = arr.length;
 
@@ -13,16 +13,16 @@ contract BinarySearch {
             uint middle = left + (right - left) / 2;
 
             if (target == arr[middle]) {
-                return middle;
+                return int(middle);
             }
 
             if (target < arr[middle]) {
                 right = middle;
             } else {
-                left = middle;
+                left = middle + 1;
             }
         }
 
-        return left;
+        return -1;
     }
 }
