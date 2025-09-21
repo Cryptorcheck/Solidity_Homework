@@ -15,7 +15,7 @@ contract ERC20Impl is IERC20 {
     mapping(address owner => mapping(address spender => uint amount))
         private _allowance;
 
-    // 交易
+    // 直接转账
     function transfer(
         address to,
         uint256 value
