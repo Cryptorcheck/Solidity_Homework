@@ -25,6 +25,7 @@ contract ERC20Impl is IERC20 {
         _;
     }
 
+    // 铸币
     function mint(uint256 value) public onlyOwner {
         _totalSupply += value;
     }
