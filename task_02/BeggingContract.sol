@@ -62,6 +62,7 @@ contract BeggingContract {
     event Donation(address indexed donor, uint256 amount);
 
     modifier onlyOwner() {
+        require(msg.sender == owner, "no authorized");
         _;
     }
 
